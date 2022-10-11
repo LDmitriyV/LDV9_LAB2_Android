@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#323133"
+    android:gravity="center_vertical"
+    android:stretchColumns="*">
+    <!-- Строка таблицы 1 -->
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="wrap_content"
+            android:layout_height="99dp"
+            android:layout_span="6"
+            app:srcCompat="@drawable/task" />
+    </TableRow>
+
+    <TableRow>
+        <!-- A -->
+        <TextView
+            android:id="@+id/textView_a"
+            android:gravity="right"
+            android:hint="@string/a"
+            android:textColor="#FFFFFF"
+            android:textColorHint="#FFFFFF"
+            tools:ignore="HardcodedText,RtlHardcoded" />
+        <!-- Поле ввода числа "a" -->
+        <EditText
+            android:id="@+id/editText_a"
+            android:importantForAutofill="no"
+            android:inputType="number|text"
+            tools:ignore="LabelFor"
+            android:textColor="#FFFFFF"/>
+        <!-- B -->
+        <TextView
+            android:id="@+id/textView_b"
+            android:gravity="right"
+            android:hint="@string/b"
+            android:textColor="#FFFFFF"
+            android:textColorHint="#FFFFFF"
+            tools:ignore="HardcodedText,RtlHardcoded" />
+        <!-- Поле ввода числа "b" -->
+        <EditText
+            android:id="@+id/editText_b"
+            android:importantForAutofill="no"
+            android:inputType="number|text"
+            tools:ignore="LabelFor"
+            android:textColor="#FFFFFF"/>
+        <!-- X -->
+        <TextView
+            android:id="@+id/textView_x"
+            android:gravity="right"
+            android:hint="@string/x"
+            android:importantForAutofill="no"
+            android:inputType="textPersonName"
+            android:textColor="#FFFFFF"
+            android:textColorHint="#FFFFFF"
+            tools:ignore="HardcodedText,RtlHardcoded" />
+        <!-- Поле ввода числа "x" -->
+        <EditText
+            android:id="@+id/editText_x"
+            android:importantForAutofill="no"
+            android:inputType="number|text"
+            android:textColor="#FFFFFF"
+            tools:ignore="LabelFor" />
+    </TableRow>
+    <!-- Строка таблицы 3 -->
+    <TableRow>
+        <!-- Кнопка для расчета -->
+        <Button
+            android:id="@+id/buttonSolve"
+            android:layout_span="6"
+            android:onClick="onCalc"
+            android:text="Решить"
+            android:background="@color/colorAccent"
+            tools:ignore="HardcodedText" />
+    </TableRow>
+    <!-- Строка таблицы 4 -->
+    <TableRow>
+        <TextView
+            android:id="@+id/textView_solve"
+            android:layout_span="6"
+            android:gravity="center"
+            android:text="Введите цифры и нажмите кнопку решить"
+            android:textColor="#A0CECB"
+            tools:ignore="HardcodedText" />
+    </TableRow>
+</TableLayout>
